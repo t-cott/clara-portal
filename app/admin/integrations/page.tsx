@@ -173,14 +173,16 @@ export default function IntegrationsPage() {
             className="rounded-xl border border-slate-200 bg-white overflow-hidden"
           >
             {/* Header */}
-            <div className="flex items-center gap-4 border-b border-slate-100 px-6 py-4">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 border-b border-slate-100 px-4 sm:px-6 py-4">
               <div
-                className={`flex h-10 w-10 items-center justify-center rounded-lg text-sm font-bold text-white ${
+                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-sm font-bold text-white ${
                   integration.id === "supabase"
                     ? "bg-emerald-600"
                     : integration.id === "anthropic"
                       ? "bg-orange-600"
-                      : "bg-slate-900"
+                      : integration.id === "github"
+                        ? "bg-slate-700"
+                        : "bg-slate-900"
                 }`}
               >
                 {integration.icon}
@@ -251,7 +253,7 @@ export default function IntegrationsPage() {
         <p className="mt-1 text-sm text-slate-500">
           Copy this template and fill in your keys:
         </p>
-        <pre className="mt-3 overflow-x-auto rounded-lg bg-slate-900 p-4 text-sm text-slate-300">
+        <pre className="mt-3 overflow-x-auto rounded-lg bg-slate-900 p-3 sm:p-4 text-xs sm:text-sm text-slate-300">
 {`# Supabase
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key

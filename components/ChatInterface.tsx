@@ -107,7 +107,7 @@ export default function ChatInterface({
       {/* Input area */}
       <form
         onSubmit={handleSend}
-        className="border-t border-slate-200 bg-white p-4"
+        className="border-t border-slate-200 bg-white p-3 sm:p-4"
       >
         <div className="flex gap-2">
           <input

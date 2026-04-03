@@ -159,7 +159,7 @@ export default function ClientLayout({ children }: { children: ReactNode }) {
 
         {/* Sidebar */}
         <aside
-          className={`fixed inset-y-0 left-0 z-40 w-72 transform border-r border-slate-200 bg-slate-50 transition-transform duration-200 md:relative md:translate-x-0 ${
+          className={`fixed inset-y-0 left-0 z-40 w-[calc(100%-3rem)] max-w-72 transform border-r border-slate-200 bg-slate-50 transition-transform duration-200 md:relative md:w-72 md:max-w-none md:translate-x-0 ${
             sidebarOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
